@@ -1,0 +1,52 @@
+%YAML:1.0
+
+# ORB-SLAM3 settings for learning_gazebo mbot camera
+# Source camera model: camera_gazebo.xacro
+# - width: 320
+# - height: 180
+# - horizontal_fov: 1.3962634 rad
+# PinHole intrinsics computed from hfov:
+#   fx = (w/2) / tan(hfov/2)
+#   fy computed from aspect ratio (equals fx here)
+
+File.version: "1.0"
+
+Camera.type: "PinHole"
+
+Camera1.fx: 190.68123344056778
+Camera1.fy: 190.68123344056778
+Camera1.cx: 160.5
+Camera1.cy: 90.5
+
+Camera1.k1: 0.0
+Camera1.k2: 0.0
+Camera1.p1: 0.0
+Camera1.p2: 0.0
+Camera1.k3: 0.0
+
+Camera.width: 320
+Camera.height: 180
+
+Camera.fps: 10
+
+# We convert incoming images to BGR8 in the node.
+Camera.RGB: 0
+
+# ORB extractor
+ORBextractor.nFeatures: 800
+ORBextractor.scaleFactor: 1.2
+ORBextractor.nLevels: 8
+ORBextractor.iniThFAST: 20
+ORBextractor.minThFAST: 7
+
+# Viewer
+Viewer.KeyFrameSize: 0.05
+Viewer.KeyFrameLineWidth: 1.0
+Viewer.GraphLineWidth: 0.9
+Viewer.PointSize: 2.0
+Viewer.CameraSize: 0.08
+Viewer.CameraLineWidth: 3.0
+Viewer.ViewpointX: 0.0
+Viewer.ViewpointY: -0.7
+Viewer.ViewpointZ: -1.8
+Viewer.ViewpointF: 500.0
